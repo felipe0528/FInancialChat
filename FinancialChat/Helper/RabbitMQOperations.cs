@@ -62,7 +62,6 @@ namespace FinancialChat.Helper
             {
                 string queue = myqueue;
                 IModel channel = con.CreateModel();
-                channel.QueueDeclare(queue: queue, durable: true, exclusive: false, autoDelete: false, arguments: null);
                 var consumer = new EventingBasicConsumer(channel);
                 BasicGetResult result = channel.BasicGet(queue: queue, autoAck: true);
                 if (result != null)
@@ -70,7 +69,7 @@ namespace FinancialChat.Helper
                 else
                     return null;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return null;
 

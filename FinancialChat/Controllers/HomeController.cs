@@ -1,18 +1,25 @@
 ﻿using FinancialChat.Helper;
-using FinancialChat.Models;
+using FinancialChat.Models.Bot;
 using Microsoft.AspNet.Identity;
+using Microsoft.VisualBasic.FileIO;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.IO;
+using System.Net;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 
 namespace FinancialChat.Controllers
 {
     public class HomeController : Controller
     {
+        private IBot _bot { get; }
+
+        public HomeController()
+        {
+            _bot = new Bot();
+        }
+
         [Authorize]
         public ActionResult Index()
         {
@@ -26,7 +33,16 @@ namespace FinancialChat.Controllers
             RabbitMQOperations rabbit = new RabbitMQOperations();
             IConnection con = rabbit.GetConnection();
             var currentUser = User.Identity.GetUserName();
-            message = "<b>" + currentUser + "</b>: " + message;
+            string quote = _bot.GetQuote(message);
+            if (quote != null)
+            {
+                message = "<b>Bot</b>: " + quote;
+            }
+            else
+            {
+                message = "<b>" + currentUser + "</b>: " + message;
+            }
+            
             bool flag = rabbit.send(con, message);
             return Json("Sent");
         }
