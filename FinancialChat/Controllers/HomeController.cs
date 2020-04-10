@@ -1,4 +1,5 @@
 ﻿using FinancialChat.Helper;
+using FinancialChat.Models;
 using Microsoft.AspNet.Identity;
 using RabbitMQ.Client;
 using System;
@@ -15,13 +16,19 @@ namespace FinancialChat.Controllers
         [Authorize]
         public ActionResult Index()
         {
+            var context = new ApplicationDbContext();
+            var allUsers = context.Users.ToList();
             var currentUser = User.Identity.GetUserName();
             List<ListItem> listItems = new List<ListItem>();
-            listItems.Add(new ListItem
+            foreach (var item in allUsers)
             {
-                Text = currentUser,
-                Value = currentUser
-            });
+                listItems.Add(new ListItem
+                {
+                    Text = item.UserName,
+                    Value = item.UserName
+                });
+            }
+            
             ViewBag.Users = listItems;
             return View();
         }
