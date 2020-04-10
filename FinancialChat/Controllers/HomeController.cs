@@ -47,8 +47,6 @@ namespace FinancialChat.Controllers
             {
                 return null;
             }
-
-
         }
 
         public ActionResult About()

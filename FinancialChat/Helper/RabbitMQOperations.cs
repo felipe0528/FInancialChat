@@ -25,9 +25,11 @@ namespace FinancialChat.Helper
         {
             try
             {
+                IDictionary<string, object> attr = new Dictionary<string, object>();
+                attr.Add("x-max-length", 50);
                 IModel channel = con.CreateModel();
                 channel.ExchangeDeclare("messageexchange", ExchangeType.Fanout);
-                channel.QueueDeclare(userqueue, true, false, false, null);
+                channel.QueueDeclare(userqueue, true, false, false, attr);
                 channel.QueueBind(userqueue, "messageexchange", userqueue, null);
             }
             catch (Exception e)
