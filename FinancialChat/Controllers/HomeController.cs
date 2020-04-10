@@ -16,33 +16,19 @@ namespace FinancialChat.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            var context = new ApplicationDbContext();
-            var allUsers = context.Users.ToList();
-            var currentUser = User.Identity.GetUserName();
-            List<ListItem> listItems = new List<ListItem>();
-            foreach (var item in allUsers)
-            {
-                listItems.Add(new ListItem
-                {
-                    Text = item.UserName,
-                    Value = item.UserName
-                });
-            }
-            
-            ViewBag.Users = listItems;
             return View();
         }
 
         [Authorize]
         [HttpPost]
-        public JsonResult sendmsg(string message, string recipient)
+        public JsonResult sendmsg(string message)
         {
             RabbitMQOperations rabbit = new RabbitMQOperations();
             IConnection con = rabbit.GetConnection();
             var currentUser = User.Identity.GetUserName();
-            message = currentUser + ": " + message;
-            bool flag = rabbit.send(con, message, recipient);
-            return Json(null);
+            message = "<b>" + currentUser + "</b>: " + message;
+            bool flag = rabbit.send(con, message);
+            return Json("Sent");
         }
 
         [Authorize]
@@ -59,7 +45,6 @@ namespace FinancialChat.Controllers
             }
             catch (Exception)
             {
-
                 return null;
             }
 

@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FinancialChat.Models;
+using FinancialChat.Helper;
+using RabbitMQ.Client;
 
 namespace FinancialChat.Controllers
 {
@@ -156,13 +158,21 @@ namespace FinancialChat.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
+                    try
+                    {
+                        RabbitMQOperations rabbit = new RabbitMQOperations();
+                        IConnection con = rabbit.GetConnection();
+                        bool register = rabbit.RegisterQueue(con, user.UserName);
+                    }
+                    catch (Exception)
+                    {
+                    }
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

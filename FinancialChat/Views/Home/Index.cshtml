@@ -1,12 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-    var users = ViewBag.Users;
 }
     <br />
-<p>Select recipient:</p>
 
-@Html.DropDownList("recipient", new SelectList(ViewBag.Users, "Select Recipient"), new { @class = "form-control" })
-<br />
 <p>Message:</p>
 <div class="form-group">
     <input type="text" name="txtmsg" id="txtmsg" class="form-control" />
@@ -49,7 +45,6 @@
                     success: function (response) {
                         var data = $("#divmsg").html();
                         $("#divmsg").html(data + "<br>" + response);
-
                     },
                     error: function (response) {
 
@@ -60,18 +55,18 @@
                 var message = $("#txtmsg").val();
                 var recipient = $("#recipient").val();
                 var data = $("#divmsg").html();
-                $("#divmsg").html(data + "<br>Me:" + message);
+                //$("#divmsg").html(data + "<br>Me:" + message);
                 $("#txtmsg").val("");
-                debugger;
+                //debugger;
                 $.ajax({
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
-                    data: '{"message":"' + message + '","recipient":"'+recipient+'"}',
+                    data: '{"message":"' + message +'"}',
                     url: "@Url.Action("sendmsg")",
                     dataType: "json",
                     success: function (response) {
                         var data = $("#divmsg").html();
-                        $("#divmsg").html(data + "<br>Me :" + message);
+                        $("#divmsg").html(data + "<br>" + response);
                     },
                     error: function (response) {
 

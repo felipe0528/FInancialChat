@@ -21,16 +21,30 @@ namespace FinancialChat.Helper
 
             return factory.CreateConnection();
         }
-        public bool send(IConnection con, string message, string userqueue)
+        public bool RegisterQueue(IConnection con, string userqueue)
         {
             try
             {
                 IModel channel = con.CreateModel();
-                channel.ExchangeDeclare("messageexchange", ExchangeType.Direct);
+                channel.ExchangeDeclare("messageexchange", ExchangeType.Fanout);
                 channel.QueueDeclare(userqueue, true, false, false, null);
                 channel.QueueBind(userqueue, "messageexchange", userqueue, null);
+            }
+            catch (Exception e)
+            {
+
+
+            }
+            return true;
+        }
+
+        public bool send(IConnection con, string message)
+        {
+            try
+            {
+                IModel channel = con.CreateModel();
                 var msg = Encoding.UTF8.GetBytes(message);
-                channel.BasicPublish("messageexchange", userqueue, null, msg);
+                channel.BasicPublish("messageexchange", "", null, msg);
             }
             catch (Exception)
             {
