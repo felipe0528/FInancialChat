@@ -64,7 +64,7 @@ namespace FinancialChat.Models.Bot
                     {
                         return "Error: Code '" + code + "' it's not valid";
                     }
-                    return code.ToUpper() + " quote is OPEN: $" + result[10] + " per share";
+                    return code.ToUpper() + " quote is: $" + result[10] + " per share";
                 }
             }
 

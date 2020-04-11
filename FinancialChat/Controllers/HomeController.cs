@@ -36,15 +36,15 @@ namespace FinancialChat.Controllers
             string quote = _bot.GetQuote(message);
             if (quote != null)
             {
-                message = "<b>Bot</b>: " + quote;
+                message = "<b>Bot</b>: " + quote + "<small style='font-size: 60%'> - " + DateTime.Now.ToShortTimeString() +"</small>";
             }
             else
             {
-                message = "<b>" + currentUser + "</b>: " + message;
+                message = "<b>" + currentUser + "</b>: " + message + "<small style='font-size: 60%'> - " + DateTime.Now.ToShortTimeString() + "</small>"; 
             }
             
             bool flag = rabbit.send(con, message);
-            return Json("Sent");
+            return Json("<small style='font-size: 60%'> √ - Message Delivered</small>");
         }
 
         [Authorize]
@@ -63,20 +63,6 @@ namespace FinancialChat.Controllers
             {
                 return null;
             }
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

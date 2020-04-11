@@ -11,6 +11,7 @@
     <input type="button" value="send" class="btn btn-success" name="btnsend" id="btnsend" />
 </div>
 <br />
+
 <div class="col-md-12">
     <div class="panel panel-success">
         <div class="panel-heading">
@@ -24,6 +25,7 @@
         </div>
     </div>
 </div>
+<p><small>Use to know Open stock Price: /stock=^SPX  </small></p>
 
 
 
@@ -53,9 +55,6 @@
             }, 2000);
             function send() {
                 var message = $("#txtmsg").val();
-                var recipient = $("#recipient").val();
-                var data = $("#divmsg").html();
-                //$("#divmsg").html(data + "<br>Me:" + message);
                 $("#txtmsg").val("");
                 //debugger;
                 $.ajax({
