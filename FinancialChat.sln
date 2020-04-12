@@ -7,11 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialChat", "FinancialC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialChat.Tests", "FinancialChat.Tests\FinancialChat.Tests.csproj", "{E1D19039-EA42-4951-A094-A3F2FDF16C84}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WenAppMM", "WenAppMM\WenAppMM.wixproj", "{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED}"
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WebAppInstallerMM", "WebAppInstallerMM\WebAppInstallerMM.wixproj", "{3EE4B90C-865A-44E9-9D37-799708693C68}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WenApp", "WenApp\WenApp.wixproj", "{68BD776D-BD0C-44DB-8240-8FB8EF26F23F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinancialChat.Installer", "FinancialChat.Installer", "{D415DE43-E65B-4C60-96E6-B5A35C4D53A4}"
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WebAppInstaller", "WebAppInstaller\WebAppInstaller.wixproj", "{F2A7F082-5D3A-4785-B15E-15D3DB0E0D53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,25 +35,21 @@ Global
 		{E1D19039-EA42-4951-A094-A3F2FDF16C84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1D19039-EA42-4951-A094-A3F2FDF16C84}.Release|x86.ActiveCfg = Release|Any CPU
 		{E1D19039-EA42-4951-A094-A3F2FDF16C84}.Release|x86.Build.0 = Release|Any CPU
-		{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED}.Debug|x86.ActiveCfg = Debug|x86
-		{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED}.Debug|x86.Build.0 = Debug|x86
-		{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED}.Release|Any CPU.ActiveCfg = Release|x86
-		{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED}.Release|x86.ActiveCfg = Release|x86
-		{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED}.Release|x86.Build.0 = Release|x86
-		{68BD776D-BD0C-44DB-8240-8FB8EF26F23F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{68BD776D-BD0C-44DB-8240-8FB8EF26F23F}.Debug|x86.ActiveCfg = Debug|x86
-		{68BD776D-BD0C-44DB-8240-8FB8EF26F23F}.Debug|x86.Build.0 = Debug|x86
-		{68BD776D-BD0C-44DB-8240-8FB8EF26F23F}.Release|Any CPU.ActiveCfg = Release|x86
-		{68BD776D-BD0C-44DB-8240-8FB8EF26F23F}.Release|x86.ActiveCfg = Release|x86
-		{68BD776D-BD0C-44DB-8240-8FB8EF26F23F}.Release|x86.Build.0 = Release|x86
+		{3EE4B90C-865A-44E9-9D37-799708693C68}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3EE4B90C-865A-44E9-9D37-799708693C68}.Debug|x86.ActiveCfg = Debug|x86
+		{3EE4B90C-865A-44E9-9D37-799708693C68}.Debug|x86.Build.0 = Debug|x86
+		{3EE4B90C-865A-44E9-9D37-799708693C68}.Release|Any CPU.ActiveCfg = Release|x86
+		{3EE4B90C-865A-44E9-9D37-799708693C68}.Release|x86.ActiveCfg = Release|x86
+		{3EE4B90C-865A-44E9-9D37-799708693C68}.Release|x86.Build.0 = Release|x86
+		{F2A7F082-5D3A-4785-B15E-15D3DB0E0D53}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F2A7F082-5D3A-4785-B15E-15D3DB0E0D53}.Debug|x86.ActiveCfg = Debug|x86
+		{F2A7F082-5D3A-4785-B15E-15D3DB0E0D53}.Debug|x86.Build.0 = Debug|x86
+		{F2A7F082-5D3A-4785-B15E-15D3DB0E0D53}.Release|Any CPU.ActiveCfg = Release|x86
+		{F2A7F082-5D3A-4785-B15E-15D3DB0E0D53}.Release|x86.ActiveCfg = Release|x86
+		{F2A7F082-5D3A-4785-B15E-15D3DB0E0D53}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6D90DE78-2D5D-4B3F-BF6F-C773D8FB0CED} = {D415DE43-E65B-4C60-96E6-B5A35C4D53A4}
-		{68BD776D-BD0C-44DB-8240-8FB8EF26F23F} = {D415DE43-E65B-4C60-96E6-B5A35C4D53A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B88A47B-B0F3-4D39-A6F9-A16F1D6F74BB}
