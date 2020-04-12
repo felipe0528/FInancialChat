@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define ComponentRules="OneToOne"?>
+  <!-- SourceDir instructs IsWiX the location of the directory that contains files for this merge module -->
+  <?define SourceDir="..\Deploy"?>
+  <Module Id="WebAppMM" Language="1033" Version="1.0.0.0">
+    <Package Id="a9dd19dc-8de4-4342-8709-42c4f63c4a8c" Manufacturer="WebAppMM" InstallerVersion="200" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="MergeRedirectFolder">
+        <Directory Id="owd7EC1B11923C34664BC418072E67046F6" Name="WebSite">
+          <Component Id="owc8E41C4B2B2A6787B4C06C2A166A1DDBE" Guid="df5ec153-160a-c7f7-fd9d-70d0954e394f">
+            <File Id="owf8E41C4B2B2A6787B4C06C2A166A1DDBE" Source="$(var.SourceDir)\WebSite\favicon.ico" KeyPath="yes" />
+          </Component>
+          <Component Id="owc4B6D5BA5276F4BDD1DD6598B12105545" Guid="bc0f32ae-b043-2375-8c11-c23c6504c525">
+            <File Id="owf4B6D5BA5276F4BDD1DD6598B12105545" Source="$(var.SourceDir)\WebSite\Global.asax" KeyPath="yes" />
+          </Component>
+          <Component Id="owc17F0ED4422E9CB4943EB47850B1E187C" Guid="88f71269-d94f-aae6-a588-a33b8a989edd">
+            <File Id="owf17F0ED4422E9CB4943EB47850B1E187C" Source="$(var.SourceDir)\WebSite\Web.config" KeyPath="yes" />
+          </Component>
+          <Directory Id="owdB32559087C7B190032A3F036BB617D42" Name="bin">
+            <Component Id="owc9A883F2542182D2AF312F98F089A97A9" Guid="6c7e1bc7-3803-5e08-a39c-132e34dbd9f1">
+              <File Id="owf9A883F2542182D2AF312F98F089A97A9" Source="$(var.SourceDir)\WebSite\bin\Antlr3.Runtime.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcF78819BEE4564CBC5BBC01D6D880B208" Guid="c5a1bda9-c203-ab8b-f4e9-61e644359b83">
+              <File Id="owfF78819BEE4564CBC5BBC01D6D880B208" Source="$(var.SourceDir)\WebSite\bin\Antlr3.Runtime.pdb" KeyPath="yes" />
+            </Component>
+            <Component Id="owc55A44F354086220C68B0B327295A282D" Guid="2f2814c7-ee56-806d-93c9-336cb5ba3108">
+              <File Id="owf55A44F354086220C68B0B327295A282D" Source="$(var.SourceDir)\WebSite\bin\EntityFramework.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc9D287C1F90926D17D13A1FF54C3E92A9" Guid="cfb6d982-55a4-1f8d-7a38-d5802432fe54">
+              <File Id="owf9D287C1F90926D17D13A1FF54C3E92A9" Source="$(var.SourceDir)\WebSite\bin\EntityFramework.SqlServer.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc7C3D361B7904F5557C4E0A9DA631A96F" Guid="340bc0d8-7b0d-fed8-7ca0-3f3b7e2f4601">
+              <File Id="owf7C3D361B7904F5557C4E0A9DA631A96F" Source="$(var.SourceDir)\WebSite\bin\FinancialChat.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcEC20E5B2898C3B65D68668AC2E1D3612" Guid="2d4a8615-27ba-31dd-4035-f153ee983531">
+              <File Id="owfEC20E5B2898C3B65D68668AC2E1D3612" Source="$(var.SourceDir)\WebSite\bin\FinancialChat.pdb" KeyPath="yes" />
+            </Component>
+            <Component Id="owcA2C67F262A856B2D8CBCB900222BEFE5" Guid="e62ba974-caab-1b1b-2ca3-cd5831ef866f">
+              <File Id="owfA2C67F262A856B2D8CBCB900222BEFE5" Source="$(var.SourceDir)\WebSite\bin\Microsoft.AspNet.Identity.Core.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcDB1B778B11503206916C9ADECB580D42" Guid="9f39ee0f-402b-5a5d-e88c-11f765d1f60c">
+              <File Id="owfDB1B778B11503206916C9ADECB580D42" Source="$(var.SourceDir)\WebSite\bin\Microsoft.AspNet.Identity.EntityFramework.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc7C6D2D7F7922DF22A2EEF222F872412F" Guid="b386775c-e00d-a19e-6360-ce22faf9019a">
+              <File Id="owf7C6D2D7F7922DF22A2EEF222F872412F" Source="$(var.SourceDir)\WebSite\bin\Microsoft.AspNet.Identity.Owin.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc847F960B64BD990428DB34B04B8ED321" Guid="05368d4f-59b0-a7f8-dc37-a4e8506acb8a">
+              <File Id="owf847F960B64BD990428DB34B04B8ED321" Source="$(var.SourceDir)\WebSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcE04A10BF13460AA3FD6C81D073BD59B6" Guid="954281c5-614d-1ecd-6827-7b257321347f">
+              <File Id="owfE04A10BF13460AA3FD6C81D073BD59B6" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Diagnostics.Tracing.EventSource.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc9C89A26C6C8083A312957F0BCB8FCE21" Guid="998977ec-792c-4e89-2885-0af136471b31">
+              <File Id="owf9C89A26C6C8083A312957F0BCB8FCE21" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc2C52036402731CF2A2781D507F8DE424" Guid="0cd065ca-9858-b741-4f68-bd1bcfcc4f3d">
+              <File Id="owf2C52036402731CF2A2781D507F8DE424" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Host.SystemWeb.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc0C3E4BA696A111F30CE09F69DEB40D3F" Guid="d10f6a82-bd05-5007-617b-39afcfbbf629">
+              <File Id="owf0C3E4BA696A111F30CE09F69DEB40D3F" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Security.Cookies.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc7C2F93CA6BFCEF7FCF77C298A7722202" Guid="65f0ec42-54d3-dfc9-50b2-90b849af7e9f">
+              <File Id="owf7C2F93CA6BFCEF7FCF77C298A7722202" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Security.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc17BB10381830AAC0A0B711152ABE94C3" Guid="f4ec2399-0218-88e8-7a74-e03929279a5e">
+              <File Id="owf17BB10381830AAC0A0B711152ABE94C3" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Security.Facebook.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcB52CBB49A6A667D43F29425D3A829862" Guid="6f02b8a3-1c19-ae6b-f0cb-60494e79d42f">
+              <File Id="owfB52CBB49A6A667D43F29425D3A829862" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Security.Google.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc52856854A9EBD5709B0604AD6F6AC87C" Guid="eb58c546-2e1b-1d6b-29d1-f2048f00aab2">
+              <File Id="owf52856854A9EBD5709B0604AD6F6AC87C" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcE9555CE32C3C5FFBF7F63EE35E8689DF" Guid="e3e4ec1e-c045-9f9e-6291-908a560f0398">
+              <File Id="owfE9555CE32C3C5FFBF7F63EE35E8689DF" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Security.OAuth.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcF9C622929EFA1C10E5E9A3B9FDF13D01" Guid="b0ac5038-d5a9-d506-63ab-61c2f073b9f8">
+              <File Id="owfF9C622929EFA1C10E5E9A3B9FDF13D01" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Owin.Security.Twitter.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc4387E73339A6111CA82A1795C4606065" Guid="89438944-769b-4f60-cd08-040a0cbd6f05">
+              <File Id="owf4387E73339A6111CA82A1795C4606065" Source="$(var.SourceDir)\WebSite\bin\Microsoft.Web.Infrastructure.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc0182FC8503E24C53CF549F36AEC5B5DD" Guid="6d6dccc3-ec32-31ca-c500-f9c94cff8ccd">
+              <File Id="owf0182FC8503E24C53CF549F36AEC5B5DD" Source="$(var.SourceDir)\WebSite\bin\Newtonsoft.Json.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc06BFE2FFDD7C693E6B1D2487C15D1C9B" Guid="b750e572-051e-ea97-381b-d585acff3ab7">
+              <File Id="owf06BFE2FFDD7C693E6B1D2487C15D1C9B" Source="$(var.SourceDir)\WebSite\bin\Owin.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcFE8F14EA8BB5B82A3752594E25882D14" Guid="90cbd7eb-5f12-b941-d888-562da355fc6e">
+              <File Id="owfFE8F14EA8BB5B82A3752594E25882D14" Source="$(var.SourceDir)\WebSite\bin\RabbitMQ.Client.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc8E36A2E69E81DC1BA763FC7CF6852075" Guid="61326653-861d-f5dc-4c85-ebd73a904e0c">
+              <File Id="owf8E36A2E69E81DC1BA763FC7CF6852075" Source="$(var.SourceDir)\WebSite\bin\System.Net.Http.Formatting.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcAF4EBB03E42407C8FF6EA9F44B91BF4A" Guid="f5bf27d2-ebdd-0e39-8c4f-3ce691a0af16">
+              <File Id="owfAF4EBB03E42407C8FF6EA9F44B91BF4A" Source="$(var.SourceDir)\WebSite\bin\System.Web.Helpers.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcFD657D77B609B456EBD0A974B674369C" Guid="ed88d87e-8084-53ae-73e7-7ce3244f0594">
+              <File Id="owfFD657D77B609B456EBD0A974B674369C" Source="$(var.SourceDir)\WebSite\bin\System.Web.Http.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcE2065354D01A62300F214BAFAD037BB4" Guid="6c41f27e-6bbe-33c9-fb9d-fa21225957e7">
+              <File Id="owfE2065354D01A62300F214BAFAD037BB4" Source="$(var.SourceDir)\WebSite\bin\System.Web.Http.WebHost.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc2A768183ADC870C68DFAA1B2A8DB7B08" Guid="82444942-81b9-257f-562d-751467debfb6">
+              <File Id="owf2A768183ADC870C68DFAA1B2A8DB7B08" Source="$(var.SourceDir)\WebSite\bin\System.Web.Mvc.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcDDA6AD1D07835F9ADF6E6E8C0DD1C98A" Guid="f18c022e-e359-a038-efe6-115a2914b489">
+              <File Id="owfDDA6AD1D07835F9ADF6E6E8C0DD1C98A" Source="$(var.SourceDir)\WebSite\bin\System.Web.Optimization.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcB0F8E9DFECAACD4F67273967EB69D8AB" Guid="9e4569d5-0ae3-6ebb-b01a-9ed9c35f9ab7">
+              <File Id="owfB0F8E9DFECAACD4F67273967EB69D8AB" Source="$(var.SourceDir)\WebSite\bin\System.Web.Razor.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc9167AED3D77A41991495E1C5EBA9C1A2" Guid="7c7fa2ab-89ee-562a-4c86-08b5d1e95fa5">
+              <File Id="owf9167AED3D77A41991495E1C5EBA9C1A2" Source="$(var.SourceDir)\WebSite\bin\System.Web.WebPages.Deployment.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owcDCF90FC10E3C3176EB06B432AECFC652" Guid="12f731c1-9b18-1755-27a9-a3058b63eba7">
+              <File Id="owfDCF90FC10E3C3176EB06B432AECFC652" Source="$(var.SourceDir)\WebSite\bin\System.Web.WebPages.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc46C9F2A8395524D1E2663BCEC9641A4E" Guid="c4ffb011-5219-ff08-24e4-b9f44e400857">
+              <File Id="owf46C9F2A8395524D1E2663BCEC9641A4E" Source="$(var.SourceDir)\WebSite\bin\System.Web.WebPages.Razor.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="owc045A956C7D35474B447C567639D5B73F" Guid="db17aff8-e869-0574-abb7-5723bf6e021f">
+              <File Id="owf045A956C7D35474B447C567639D5B73F" Source="$(var.SourceDir)\WebSite\bin\WebGrease.dll" KeyPath="yes" />
+            </Component>
+            <Directory Id="owd896ACCBF1C336A64D4F320A483CD5B91" Name="roslyn">
+              <Component Id="owcCE07E4BEEF7E037A0FD752ABA9CA001B" Guid="86bf1bd6-a3bc-531d-b495-d160aad3a282">
+                <File Id="owfCE07E4BEEF7E037A0FD752ABA9CA001B" Source="$(var.SourceDir)\WebSite\bin\roslyn\csc.exe" KeyPath="yes" />
+              </Component>
+              <Component Id="owc831132B2A5D64F34D33A8F303FDA9310" Guid="8860ecc2-22c6-f68c-15c5-29eba7f65781">
+                <File Id="owf831132B2A5D64F34D33A8F303FDA9310" Source="$(var.SourceDir)\WebSite\bin\roslyn\csc.exe.config" KeyPath="yes" />
+              </Component>
+              <Component Id="owc790F8379FCFFE75B7B0CC3715CF0ADCD" Guid="587beac2-69b2-d469-518c-3b9cbe938c44">
+                <File Id="owf790F8379FCFFE75B7B0CC3715CF0ADCD" Source="$(var.SourceDir)\WebSite\bin\roslyn\csc.rsp" KeyPath="yes" />
+              </Component>
+              <Component Id="owc3E15FCD4486658B184E6AB20C359C9A5" Guid="8cef9e19-d561-9f06-a661-8d761503d89b">
+                <File Id="owf3E15FCD4486658B184E6AB20C359C9A5" Source="$(var.SourceDir)\WebSite\bin\roslyn\csi.exe" KeyPath="yes" />
+              </Component>
+              <Component Id="owc4A37A1B9440E10CDC90F2E4B8E4FE1DB" Guid="c05ba1c4-de23-c1cb-16f0-8e1c5e7606b4">
+                <File Id="owf4A37A1B9440E10CDC90F2E4B8E4FE1DB" Source="$(var.SourceDir)\WebSite\bin\roslyn\csi.exe.config" KeyPath="yes" />
+              </Component>
+              <Component Id="owcE6489F3132F32AC66ED39C5A02200ED4" Guid="b421ff2c-5f02-b201-6fb8-fb70811940bc">
+                <File Id="owfE6489F3132F32AC66ED39C5A02200ED4" Source="$(var.SourceDir)\WebSite\bin\roslyn\csi.rsp" KeyPath="yes" />
+              </Component>
+              <Component Id="owc60F14469540BFAF75538A256E5CE8E87" Guid="3e2f29d5-2263-ae8c-b9af-27345704134a">
+                <File Id="owf60F14469540BFAF75538A256E5CE8E87" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc26398355A9F33F67D7DDAD5662040141" Guid="8f5ce5be-2889-4cfb-26d0-9f733b855cd9">
+                <File Id="owf26398355A9F33F67D7DDAD5662040141" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc312F1ACB370C64C6D1BE1E6DE9B37D61" Guid="59316f28-726c-e64f-47f7-9f9d583d7e37">
+                <File Id="owf312F1ACB370C64C6D1BE1E6DE9B37D61" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcB82C6D3779BEF4040B8B3F38011C837F" Guid="37fc871e-5ec6-2d57-2c88-1824b4d7d9ed">
+                <File Id="owfB82C6D3779BEF4040B8B3F38011C837F" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.CodeAnalysis.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc6DA0F7241427C178513C80C9CAA70CB5" Guid="d311aec1-6c05-911f-3d7f-3b461d4e2c2e">
+                <File Id="owf6DA0F7241427C178513C80C9CAA70CB5" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc9612D9F6532A2CD1C1AD8B4D3E2C2AEE" Guid="fdf17cb1-1f3e-6aab-9e1f-06356871b025">
+                <File Id="owf9612D9F6532A2CD1C1AD8B4D3E2C2AEE" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcB571CE69DE0B042792C576D5C6AED804" Guid="91edec77-5019-8d8c-affb-0625c2ef5ecd">
+                <File Id="owfB571CE69DE0B042792C576D5C6AED804" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.CSharp.Core.targets" KeyPath="yes" />
+              </Component>
+              <Component Id="owc752E2E64FAAE31CEB82876A3268BA0E4" Guid="aceaba75-8f06-b0a3-c630-2ae7f1a976cc">
+                <File Id="owf752E2E64FAAE31CEB82876A3268BA0E4" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc307A991F57388B799CCBCA002A1BFE90" Guid="c2660dcd-5efe-ff15-91d1-845c17fa072f">
+                <File Id="owf307A991F57388B799CCBCA002A1BFE90" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcC661676EBA8F44CEE9C1E64DF84E29DB" Guid="fb37a252-ad0d-61da-d9ea-2f6e2ed87801">
+                <File Id="owfC661676EBA8F44CEE9C1E64DF84E29DB" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.Managed.Core.targets" KeyPath="yes" />
+              </Component>
+              <Component Id="owc7AD142698CFF8B59AC1799C217F9E0AA" Guid="50d519f1-5deb-bd84-11bb-fc3a53b941e9">
+                <File Id="owf7AD142698CFF8B59AC1799C217F9E0AA" Source="$(var.SourceDir)\WebSite\bin\roslyn\Microsoft.VisualBasic.Core.targets" KeyPath="yes" />
+              </Component>
+              <Component Id="owc480B7637208326BEAC387640E2DD51E1" Guid="554ffee8-cb3a-c599-36ce-22f9e648c0c7">
+                <File Id="owf480B7637208326BEAC387640E2DD51E1" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.AppContext.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcBE5B6BDF67CF312A233AD1B6E1BC6EC2" Guid="9262775b-4dd2-e7de-bf0c-561df454e111">
+                <File Id="owfBE5B6BDF67CF312A233AD1B6E1BC6EC2" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Collections.Immutable.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc3C85441F5601FBDEB4313B9DC402F8E3" Guid="f575c86e-cfe1-695a-1358-ee3fac530bfd">
+                <File Id="owf3C85441F5601FBDEB4313B9DC402F8E3" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Console.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc38A659924416A8677DC609C7549167AD" Guid="2ebeb053-1221-ab15-b145-28dc7ee3d698">
+                <File Id="owf38A659924416A8677DC609C7549167AD" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Diagnostics.FileVersionInfo.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcC265F7A80DEA78157D052A54EA356AE9" Guid="dabbd315-4345-4275-0472-7b2819ce568d">
+                <File Id="owfC265F7A80DEA78157D052A54EA356AE9" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Diagnostics.StackTrace.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcBA92379483DAAD5064A259D72B99F076" Guid="d5d9b6f3-e9ad-572b-3457-b6db7de5e292">
+                <File Id="owfBA92379483DAAD5064A259D72B99F076" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.IO.Compression.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc28BED4DC00A129629EBC5EBD8E9EB7ED" Guid="5f4e9bf3-b4bf-956b-b9f6-754c5ed5f8e7">
+                <File Id="owf28BED4DC00A129629EBC5EBD8E9EB7ED" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.IO.FileSystem.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc89FE2F5BFB7BD9402A3CD501C7AE5869" Guid="770c7864-ad4a-1a6e-21d8-bcfeeaee4642">
+                <File Id="owf89FE2F5BFB7BD9402A3CD501C7AE5869" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.IO.FileSystem.Primitives.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc4CDC483CD17091CB44975DD7A10E2571" Guid="92d6cc22-a948-019d-a170-b6a764afcb48">
+                <File Id="owf4CDC483CD17091CB44975DD7A10E2571" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.IO.Pipes.AccessControl.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc9128AEE1590E3A1414E9667752D582C8" Guid="9eaa4cb8-2a88-04ce-916b-613ef49a7685">
+                <File Id="owf9128AEE1590E3A1414E9667752D582C8" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.IO.Pipes.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc6CCF0DC9482BD67AA3A44FCF142BF3CF" Guid="734e3e63-4432-9f56-4763-10f734960699">
+                <File Id="owf6CCF0DC9482BD67AA3A44FCF142BF3CF" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Reflection.Metadata.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc9D9CE16E51F47A6BEF51FD68801F4668" Guid="5c2fc29c-d196-93bd-6e6d-eea81c70543b">
+                <File Id="owf9D9CE16E51F47A6BEF51FD68801F4668" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Security.AccessControl.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc3CE138AC7EDD068A39C77D958FC2CC77" Guid="b4b195de-4884-f796-ea08-6cefdc8facb0">
+                <File Id="owf3CE138AC7EDD068A39C77D958FC2CC77" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Security.Claims.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc1251DBE6A75E56ADBF47E3BAEA6A91E7" Guid="83708a4e-eb22-528f-9131-ee2432991444">
+                <File Id="owf1251DBE6A75E56ADBF47E3BAEA6A91E7" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Security.Cryptography.Algorithms.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc4682819DE85C0EADA032CECBB8401E31" Guid="17d1e01f-d270-0b8c-eddd-ec5024a4b61c">
+                <File Id="owf4682819DE85C0EADA032CECBB8401E31" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Security.Cryptography.Encoding.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc6EFAD16980A11AFF1B69E1AC68A97A7B" Guid="c06a2546-07ef-515f-cbce-f03be42f85e4">
+                <File Id="owf6EFAD16980A11AFF1B69E1AC68A97A7B" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Security.Cryptography.Primitives.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcD2C9CE07F292C3BC34A610482D802EBC" Guid="e2c536ff-5965-a2e0-8ad3-6aa90f321de6">
+                <File Id="owfD2C9CE07F292C3BC34A610482D802EBC" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Security.Cryptography.X509Certificates.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcED53685C9134AD5330E6B827D5C1F9F6" Guid="329abd9c-065d-7cfe-134d-de893c50854c">
+                <File Id="owfED53685C9134AD5330E6B827D5C1F9F6" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Security.Principal.Windows.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcCAC018916F7FB8513AA6C88A418B17A7" Guid="62b70c34-4298-22ed-ac2c-666339700aca">
+                <File Id="owfCAC018916F7FB8513AA6C88A418B17A7" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Text.Encoding.CodePages.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc75E1ABEBF3D591FBB4C6A635E69A4BDB" Guid="9b0f6e6b-0319-5492-e0fc-2d4a6f3dc021">
+                <File Id="owf75E1ABEBF3D591FBB4C6A635E69A4BDB" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.ValueTuple.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcA1A90F33EFEBB16B46F44735DA826D43" Guid="04dc6add-e5f5-5cd9-2ae9-b291cde588cd">
+                <File Id="owfA1A90F33EFEBB16B46F44735DA826D43" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Xml.ReaderWriter.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcE8B02C10430BB8FE2DC25E212AC28E81" Guid="60cb062d-e7cc-a5b3-3f0b-5ab145704925">
+                <File Id="owfE8B02C10430BB8FE2DC25E212AC28E81" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Xml.XmlDocument.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc28DF6F0D10619CD376EAEC170A2CDB74" Guid="4430e0e1-8dca-e859-1147-43d3e6858050">
+                <File Id="owf28DF6F0D10619CD376EAEC170A2CDB74" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Xml.XPath.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owc799D3CD83C77F10DAAF77B4D841614CF" Guid="7fbdbe62-daaf-46a3-7840-e894dd174464">
+                <File Id="owf799D3CD83C77F10DAAF77B4D841614CF" Source="$(var.SourceDir)\WebSite\bin\roslyn\System.Xml.XPath.XDocument.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="owcE07F69EC7C92C6DBFFA9FAF7DB13E291" Guid="cce2bb42-5c21-10ee-34cf-bc41b223cccf">
+                <File Id="owfE07F69EC7C92C6DBFFA9FAF7DB13E291" Source="$(var.SourceDir)\WebSite\bin\roslyn\vbc.exe" KeyPath="yes" />
+              </Component>
+              <Component Id="owc57A523928E4E7768690F01D2A518D06E" Guid="a8fa3895-1ab9-2841-63c8-4326a61dde6b">
+                <File Id="owf57A523928E4E7768690F01D2A518D06E" Source="$(var.SourceDir)\WebSite\bin\roslyn\vbc.exe.config" KeyPath="yes" />
+              </Component>
+              <Component Id="owcCF7FD5E640503BD1290555549CE169C7" Guid="d612f4e3-8c46-2918-1952-901a958550be">
+                <File Id="owfCF7FD5E640503BD1290555549CE169C7" Source="$(var.SourceDir)\WebSite\bin\roslyn\vbc.rsp" KeyPath="yes" />
+              </Component>
+              <Component Id="owc7D1C30685343D5FBD02EEC8AF8A68200" Guid="c9187acc-3a58-dafa-cb60-99a7b7dbed12">
+                <File Id="owf7D1C30685343D5FBD02EEC8AF8A68200" Source="$(var.SourceDir)\WebSite\bin\roslyn\VBCSCompiler.exe" KeyPath="yes" />
+              </Component>
+              <Component Id="owc32EE45A36503654D4F88E6739EAD1511" Guid="f1a5734a-95ab-4e36-739a-9aa289c99995">
+                <File Id="owf32EE45A36503654D4F88E6739EAD1511" Source="$(var.SourceDir)\WebSite\bin\roslyn\VBCSCompiler.exe.config" KeyPath="yes" />
+              </Component>
+            </Directory>
+          </Directory>
+          <Directory Id="owd38B903AEBC2863D8651D4F7D34F98505" Name="Content">
+            <Component Id="owc9B72DEE81C71F353F3780ABA06CF5DC4" Guid="f1f74b41-288b-e847-170f-fab19c662777">
+              <File Id="owf9B72DEE81C71F353F3780ABA06CF5DC4" Source="$(var.SourceDir)\WebSite\Content\bootstrap.css" KeyPath="yes" />
+            </Component>
+            <Component Id="owcECEC8B0AF0C24D9BAA0962C42E9C8F2C" Guid="64e21589-7698-7a3a-5afc-6b111c707d78">
+              <File Id="owfECEC8B0AF0C24D9BAA0962C42E9C8F2C" Source="$(var.SourceDir)\WebSite\Content\bootstrap.css.map" KeyPath="yes" />
+            </Component>
+            <Component Id="owc428FFDF39E4542336C28B7573F75AC27" Guid="76d28b1f-6092-917d-00bf-bf1a1b0dd7ee">
+              <File Id="owf428FFDF39E4542336C28B7573F75AC27" Source="$(var.SourceDir)\WebSite\Content\bootstrap.min.css" KeyPath="yes" />
+            </Component>
+            <Component Id="owc1A362FAC738504F81F70D6F1A08BAE87" Guid="b1012a47-6a23-2237-795c-6dc01d4449e6">
+              <File Id="owf1A362FAC738504F81F70D6F1A08BAE87" Source="$(var.SourceDir)\WebSite\Content\bootstrap.min.css.map" KeyPath="yes" />
+            </Component>
+            <Component Id="owc67BEAAEAA6E377F19809A218CB7388A8" Guid="b31f4c66-fa7b-bcb3-dcf0-4093966815df">
+              <File Id="owf67BEAAEAA6E377F19809A218CB7388A8" Source="$(var.SourceDir)\WebSite\Content\bootstrap-theme.css" KeyPath="yes" />
+            </Component>
+            <Component Id="owc50E85FD818F9BE7F2276404CF377C997" Guid="fadd5ab3-9e14-4823-19fe-cb130d6ac9f2">
+              <File Id="owf50E85FD818F9BE7F2276404CF377C997" Source="$(var.SourceDir)\WebSite\Content\bootstrap-theme.css.map" KeyPath="yes" />
+            </Component>
+            <Component Id="owcCD13817F11806269915BDEA3524D17FC" Guid="2415363c-0aca-b34b-a7a0-714cc7440505">
+              <File Id="owfCD13817F11806269915BDEA3524D17FC" Source="$(var.SourceDir)\WebSite\Content\bootstrap-theme.min.css" KeyPath="yes" />
+            </Component>
+            <Component Id="owc913B33B9E0F563CF3B4FDA3A2A10397C" Guid="91f6e448-9966-d5d2-40ff-89340e7f4439">
+              <File Id="owf913B33B9E0F563CF3B4FDA3A2A10397C" Source="$(var.SourceDir)\WebSite\Content\bootstrap-theme.min.css.map" KeyPath="yes" />
+            </Component>
+            <Component Id="owcF38D410F4A78401AD1898C544937C4A8" Guid="0e03ce36-b397-2d1b-0485-74556f3fa48c">
+              <File Id="owfF38D410F4A78401AD1898C544937C4A8" Source="$(var.SourceDir)\WebSite\Content\Site.css" KeyPath="yes" />
+            </Component>
+          </Directory>
+          <Directory Id="owd83821E69C9154A6EE11D43F2B0D38D9C" Name="fonts">
+            <Component Id="owc37AE2CAFE70C82EE22D50BF60A889912" Guid="009e1a1c-26f9-fb7e-e1a2-e5e4d3371e1e">
+              <File Id="owf37AE2CAFE70C82EE22D50BF60A889912" Source="$(var.SourceDir)\WebSite\fonts\glyphicons-halflings-regular.eot" KeyPath="yes" />
+            </Component>
+            <Component Id="owc8160887B4BB30CF67D482E16A9A32F6D" Guid="d33b31d1-b7a7-58a2-5b41-0fa12a589131">
+              <File Id="owf8160887B4BB30CF67D482E16A9A32F6D" Source="$(var.SourceDir)\WebSite\fonts\glyphicons-halflings-regular.svg" KeyPath="yes" />
+            </Component>
+            <Component Id="owc80B7DBDA94557254DA8B9421BDAE2082" Guid="80e54ff5-00f1-4010-be17-2ebc116a1203">
+              <File Id="owf80B7DBDA94557254DA8B9421BDAE2082" Source="$(var.SourceDir)\WebSite\fonts\glyphicons-halflings-regular.ttf" KeyPath="yes" />
+            </Component>
+            <Component Id="owc0D560545FD6B0EC1F1C70B7D4E4052D7" Guid="834dfbb1-55f1-7ba6-cbca-bd17db258c87">
+              <File Id="owf0D560545FD6B0EC1F1C70B7D4E4052D7" Source="$(var.SourceDir)\WebSite\fonts\glyphicons-halflings-regular.woff" KeyPath="yes" />
+            </Component>
+            <Component Id="owc1448C03B500E6A9B3BD0A8403228AF97" Guid="1e70268d-074c-1200-8de3-dd369a327b1f">
+              <File Id="owf1448C03B500E6A9B3BD0A8403228AF97" Source="$(var.SourceDir)\WebSite\fonts\glyphicons-halflings-regular.woff2" KeyPath="yes" />
+            </Component>
+          </Directory>
+          <Directory Id="owdABB8F88659B2DDF3542E10F1A72771DB" Name="Scripts">
+            <Component Id="owcA7F0CAB2D5869B4F583EFB443673B592" Guid="b7b4564e-36d5-3dcc-8450-610d1cbfe2f9">
+              <File Id="owfA7F0CAB2D5869B4F583EFB443673B592" Source="$(var.SourceDir)\WebSite\Scripts\bootstrap.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc89D6D3ADFD302E1945170DFA3D12E56A" Guid="a8a29160-1686-1f66-615c-dfb8978e42e7">
+              <File Id="owf89D6D3ADFD302E1945170DFA3D12E56A" Source="$(var.SourceDir)\WebSite\Scripts\bootstrap.min.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc620580F5D0DC4DD803494356444C36D4" Guid="fc4fdaed-74ce-e77f-95fe-4983ec7bbdf0">
+              <File Id="owf620580F5D0DC4DD803494356444C36D4" Source="$(var.SourceDir)\WebSite\Scripts\jquery.validate.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc64750D3364E64F36FFCFFAB21810AA0B" Guid="2cd41339-9aea-e7c4-c3a2-a8d2ae799a8f">
+              <File Id="owf64750D3364E64F36FFCFFAB21810AA0B" Source="$(var.SourceDir)\WebSite\Scripts\jquery.validate.min.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc4E01E7151ABA809D6DE51F2C36A93A6B" Guid="4dcb549b-1263-3d2b-e80e-e4eaf60ac4f2">
+              <File Id="owf4E01E7151ABA809D6DE51F2C36A93A6B" Source="$(var.SourceDir)\WebSite\Scripts\jquery.validate.unobtrusive.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owcE24E4EAEEBCEFA0255B99827D8A85F6C" Guid="77e2374b-56c3-1661-4299-bf9e8ebc9f3b">
+              <File Id="owfE24E4EAEEBCEFA0255B99827D8A85F6C" Source="$(var.SourceDir)\WebSite\Scripts\jquery.validate.unobtrusive.min.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc75F15EA4D38B373FBF1F72602D36FC55" Guid="ef99c70c-2a06-deae-f75e-98202f2f9b7d">
+              <File Id="owf75F15EA4D38B373FBF1F72602D36FC55" Source="$(var.SourceDir)\WebSite\Scripts\jquery-3.3.1.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc983D3A43CD80EB7FD38B6EE21E5E891C" Guid="c6b13a63-23e8-5f40-a188-e06740ff9bad">
+              <File Id="owf983D3A43CD80EB7FD38B6EE21E5E891C" Source="$(var.SourceDir)\WebSite\Scripts\jquery-3.3.1.min.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc6A76A76C6469887F1820DF1A947C4839" Guid="cbdaf75f-3df8-05ec-0311-efeb9cda44d1">
+              <File Id="owf6A76A76C6469887F1820DF1A947C4839" Source="$(var.SourceDir)\WebSite\Scripts\jquery-3.3.1.min.map" KeyPath="yes" />
+            </Component>
+            <Component Id="owcC02D98293B4599F6F9537A160800B7DB" Guid="8e0195f4-fcb9-950b-634e-ebaec911fa04">
+              <File Id="owfC02D98293B4599F6F9537A160800B7DB" Source="$(var.SourceDir)\WebSite\Scripts\jquery-3.3.1.slim.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owcB8711CF6925B04BCDD9A02E859626C0F" Guid="c26c7673-a9ee-d7b8-3cd4-b11d173d7b2f">
+              <File Id="owfB8711CF6925B04BCDD9A02E859626C0F" Source="$(var.SourceDir)\WebSite\Scripts\jquery-3.3.1.slim.min.js" KeyPath="yes" />
+            </Component>
+            <Component Id="owc6D11AC1666F6CB5F27A1A907CCD622BC" Guid="d219ef5b-3089-b43e-75ee-5fe3a441c683">
+              <File Id="owf6D11AC1666F6CB5F27A1A907CCD622BC" Source="$(var.SourceDir)\WebSite\Scripts\jquery-3.3.1.slim.min.map" KeyPath="yes" />
+            </Component>
+            <Component Id="owc4EA350D27B35E0EC9FDE3BF4F70DB9DB" Guid="1bbd40d2-e5f3-1fc8-2475-21cc671ae16a">
+              <File Id="owf4EA350D27B35E0EC9FDE3BF4F70DB9DB" Source="$(var.SourceDir)\WebSite\Scripts\modernizr-2.8.3.js" KeyPath="yes" />
+            </Component>
+          </Directory>
+          <Directory Id="owdF54F65428C16CFC0654F10262D2E2B2B" Name="Views">
+            <Component Id="owc8E019FA4EB01CB18143C33C0558E760B" Guid="e8485753-0997-d2bf-2227-cd6aaa882dcb">
+              <File Id="owf8E019FA4EB01CB18143C33C0558E760B" Source="$(var.SourceDir)\WebSite\Views\_ViewStart.cshtml" KeyPath="yes" />
+            </Component>
+            <Component Id="owc3561BE16853AD220CE460495632A97DA" Guid="25e21758-fe14-dfc0-b5d3-51d7a0676aea">
+              <File Id="owf3561BE16853AD220CE460495632A97DA" Source="$(var.SourceDir)\WebSite\Views\Web.config" KeyPath="yes" />
+            </Component>
+            <Directory Id="owdD86E0BF6E9BEC09B8C87CC26FCB09190" Name="Account">
+              <Component Id="owc340525BD4BD1153943220C893D0B54AC" Guid="8e557b46-f858-d6bb-8169-0d95206df587">
+                <File Id="owf340525BD4BD1153943220C893D0B54AC" Source="$(var.SourceDir)\WebSite\Views\Account\_ExternalLoginsListPartial.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcBD51E18B0B2986BCA41014D3FB02473C" Guid="1fe836f7-3773-f828-99a9-c6dbb21c3cc7">
+                <File Id="owfBD51E18B0B2986BCA41014D3FB02473C" Source="$(var.SourceDir)\WebSite\Views\Account\ConfirmEmail.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcBBCC2EEAEE0F0C47EAF814FE4AAB277E" Guid="a392e497-8030-bd1a-2987-9b87bbe8fbf0">
+                <File Id="owfBBCC2EEAEE0F0C47EAF814FE4AAB277E" Source="$(var.SourceDir)\WebSite\Views\Account\ExternalLoginConfirmation.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcC056D40BD448CD71A12A5C5E4AF612F9" Guid="7d9d1c11-5b1b-0b46-8050-a6b00123efba">
+                <File Id="owfC056D40BD448CD71A12A5C5E4AF612F9" Source="$(var.SourceDir)\WebSite\Views\Account\ExternalLoginFailure.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc839E2A70228E0DF60F10F1688DD7EEFC" Guid="5e245e88-a2a5-d6c3-f6b9-31cea55bc9a0">
+                <File Id="owf839E2A70228E0DF60F10F1688DD7EEFC" Source="$(var.SourceDir)\WebSite\Views\Account\ForgotPassword.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcB19A2B2B8CAF7EE649CFCCD7EEF9A3B2" Guid="cd219751-9431-9ffa-c559-5937dcf0e765">
+                <File Id="owfB19A2B2B8CAF7EE649CFCCD7EEF9A3B2" Source="$(var.SourceDir)\WebSite\Views\Account\ForgotPasswordConfirmation.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcB8057B890BFBB526A0A405342EE8DECC" Guid="db95eef7-a90b-7035-3a1a-38185d72b54f">
+                <File Id="owfB8057B890BFBB526A0A405342EE8DECC" Source="$(var.SourceDir)\WebSite\Views\Account\Login.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc07817D4DDD12428E62C3CA5DF1A084F1" Guid="ecd6ae52-a61d-a95f-c6df-41be686a517a">
+                <File Id="owf07817D4DDD12428E62C3CA5DF1A084F1" Source="$(var.SourceDir)\WebSite\Views\Account\Register.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc30B7B02B21CACFDA8E7E3C33A0B53231" Guid="4e8a5ee3-af1c-d75c-f5a3-653541959da0">
+                <File Id="owf30B7B02B21CACFDA8E7E3C33A0B53231" Source="$(var.SourceDir)\WebSite\Views\Account\ResetPassword.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc21CE8B64BBAA7F6D4672CAC68B74BCE9" Guid="eaf6150e-5981-3273-87ab-8834ba2fa2df">
+                <File Id="owf21CE8B64BBAA7F6D4672CAC68B74BCE9" Source="$(var.SourceDir)\WebSite\Views\Account\ResetPasswordConfirmation.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc79870191AA353FBA9D525603757ECA21" Guid="29ae37fc-b2ff-d3a9-bc34-1a473c766a7d">
+                <File Id="owf79870191AA353FBA9D525603757ECA21" Source="$(var.SourceDir)\WebSite\Views\Account\SendCode.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc8591B4B442861493360A8C1535C3CC51" Guid="6156fb45-a929-7023-625b-9c6ac04b251f">
+                <File Id="owf8591B4B442861493360A8C1535C3CC51" Source="$(var.SourceDir)\WebSite\Views\Account\VerifyCode.cshtml" KeyPath="yes" />
+              </Component>
+            </Directory>
+            <Directory Id="owdD571DB8DC993D90590FB5CA20E890DD3" Name="Home">
+              <Component Id="owc166465BB218B09C523D201212E026B4B" Guid="26e15b96-3dfc-9387-c57d-6e93fb0bb9af">
+                <File Id="owf166465BB218B09C523D201212E026B4B" Source="$(var.SourceDir)\WebSite\Views\Home\Index.cshtml" KeyPath="yes" />
+              </Component>
+            </Directory>
+            <Directory Id="owdD8E22E106CD23B1AD5E3191A0E3994D9" Name="Manage">
+              <Component Id="owcB8AB8862EA435C02CD5788C44BAA86EC" Guid="6502a3cb-f295-14e6-6abc-a9431efbe71d">
+                <File Id="owfB8AB8862EA435C02CD5788C44BAA86EC" Source="$(var.SourceDir)\WebSite\Views\Manage\AddPhoneNumber.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc0E6B320E922A76E45A5D434C64AD47A9" Guid="c5b32553-02a9-a320-0e80-ecb345c83449">
+                <File Id="owf0E6B320E922A76E45A5D434C64AD47A9" Source="$(var.SourceDir)\WebSite\Views\Manage\ChangePassword.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcF8D83583CEEBCC1544B03177B30FAD1D" Guid="19ea6d12-d19c-0d2e-659a-fef30a1edfb4">
+                <File Id="owfF8D83583CEEBCC1544B03177B30FAD1D" Source="$(var.SourceDir)\WebSite\Views\Manage\Index.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcDBE3FD08508D47237BE77C098D282900" Guid="76ed59b2-ffcf-9622-1cba-01c6e2c4b381">
+                <File Id="owfDBE3FD08508D47237BE77C098D282900" Source="$(var.SourceDir)\WebSite\Views\Manage\ManageLogins.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcD504DF23C90245ADDFE2CEE6109B40AD" Guid="5b1849b7-76f9-ba8d-861c-d642c2c9df39">
+                <File Id="owfD504DF23C90245ADDFE2CEE6109B40AD" Source="$(var.SourceDir)\WebSite\Views\Manage\SetPassword.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcA94BC33AAFB0623C80EE395050899CAA" Guid="f33ae8ce-dc2e-d06b-8256-63f5a8789f23">
+                <File Id="owfA94BC33AAFB0623C80EE395050899CAA" Source="$(var.SourceDir)\WebSite\Views\Manage\VerifyPhoneNumber.cshtml" KeyPath="yes" />
+              </Component>
+            </Directory>
+            <Directory Id="owd75DC7140F18963A7A78F2A6A3B48935A" Name="Shared">
+              <Component Id="owc74E9F5C305AC8A87CEE861101BB34107" Guid="216d4df8-5ae3-1fe7-72ee-ea31e1410aca">
+                <File Id="owf74E9F5C305AC8A87CEE861101BB34107" Source="$(var.SourceDir)\WebSite\Views\Shared\_Layout.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owcDDC7EBC7DBD5C9A19AC81D91E0D7C1C7" Guid="503f1d9b-ada7-dc55-4933-1b9fc76dd5c2">
+                <File Id="owfDDC7EBC7DBD5C9A19AC81D91E0D7C1C7" Source="$(var.SourceDir)\WebSite\Views\Shared\_LoginPartial.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc6B2321567CBE41DCF648EB04E6E55891" Guid="ce4855ce-703f-2b0b-a29a-00eb9f4fcd1d">
+                <File Id="owf6B2321567CBE41DCF648EB04E6E55891" Source="$(var.SourceDir)\WebSite\Views\Shared\Error.cshtml" KeyPath="yes" />
+              </Component>
+              <Component Id="owc4289AE26DA691B99E15D76AE66B3A70F" Guid="167cd545-16ec-2a93-9635-e1525b766b80">
+                <File Id="owf4289AE26DA691B99E15D76AE66B3A70F" Source="$(var.SourceDir)\WebSite\Views\Shared\Lockout.cshtml" KeyPath="yes" />
+              </Component>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <ComponentGroupRef Id="Custom" />
+  </Module>
+</Wix>
